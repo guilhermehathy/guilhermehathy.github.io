@@ -9,6 +9,8 @@ navbar:
      href: index.html
    - text: "Machine Learning"
      href: machine.html
+   - text: "D3Js"
+     href: d3.html
    - text: "MySQL"
      href: MySQL.html
    - text: "Apostila R"
