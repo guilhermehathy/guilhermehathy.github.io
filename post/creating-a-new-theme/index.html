@@ -1,0 +1,367 @@
+<!DOCTYPE HTML>
+
+<!-- 
+Strata by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Guia de Contribuição para a apostila R  &middot; Guilherme Hathy</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Guilherme Hathy">
+		<meta name="description" content="Site Pessoal">
+		<meta http-equiv="content-language" content="en-us" />
+
+		
+		<meta name="og:site_name" content="Guilherme Hathy">
+		<meta name="og:title" content="Guia de Contribuição para a apostila R ">
+		<meta name="og:url" content="https://guilhermehathy.github.io/post/creating-a-new-theme/">
+		
+		<meta name="og:image" content="https://guilhermehathy.github.io/images/avatar.jpg">
+		
+		
+
+		<meta name="generator" content="Hugo 0.26" />
+
+		<!--[if lte IE 8]><script src='https://guilhermehathy.github.io/js/ie/html5shiv.js'></script><![endif]-->
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://guilhermehathy.github.io/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="https://guilhermehathy.github.io//css/ie8.css"><![endif]-->
+
+		
+		
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	
+	<a href="https://guilhermehathy.github.io/" class="image avatar"><img src="https://guilhermehathy.github.io/images/avatar.jpg" alt="" /></a>
+	
+	
+		<h1><strong>Data Scientist</strong>, apaixonado por <br> Estatística e Programação.</h1>
+	
+
+	
+		<nav id="sidebar">
+			<ul>
+			
+				<li><a href="https://guilhermehathy.github.io/">Home</a></li>
+			
+				<li><a href="https://guilhermehathy.github.io/post/">Blog</a></li>
+			
+			</ul>
+		</nav>
+	
+</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			
+	<span>
+		<h1>Guia de Contribuição para a apostila R </h1>
+
+		<i class="fa fa-calendar"></i>&nbsp;&nbsp;
+<time datetime="2017-06-24 13:50:46 &#43;0200 &#43;0200">2017-06-24</time>&nbsp;&nbsp;
+
+
+
+
+    
+    
+        <i class="fa fa-folder"></i>&nbsp;&nbsp;
+        
+        <a class="article-category-link" href="https://guilhermehathy.github.io/categories/r">R</a>
+        
+        
+    
+
+
+
+   
+   
+
+
+	</span>
+
+	<p>
+	    
+
+<h1 id="guia-de-contribuição">Guia de Contribuição</h1>
+
+<p>O Guia de Contribuição e Estilo serve para orientar a forma de trabalhar que seja eficiente, padronizada, coordenada e segura e produza conteúdo de qualidade. Este guia contém orientações de como escrever o código e escrever a documentação.</p>
+
+<h1 id="conjunto-de-dados">Conjunto de Dados</h1>
+
+<p>Para um melhor aproveitamento dos projetos coletivos do PET é recomendado o uso do <a href="https://gitlab.c3sl.ufpr.br/pet-estatistica/labestData">LabestData</a> quando for necessário o uso de um conjunto de dados.
+Utilize a função <code>library(labestData)</code>.</p>
+
+<h1 id="divisão-dos-capítulos">Divisão dos Capítulos</h1>
+
+<table>
+<thead>
+<tr class="header">
+<th>Capítulo</th>
+<th>Integrante Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Capítulo 1</td>
+<td>Igor</td>
+</tr>
+<tr class="even">
+<td>Capítulo 2</td>
+<td>Jayme</td>
+</tr>
+<tr class="odd">
+<td>Capítulo 3</td>
+<td>Igor</td>
+</tr>
+<tr class="even">
+<td>Capítulo 4</td>
+<td>Altamiro</td>
+</tr>
+<tr class="odd">
+<td>Capítulo 5</td>
+<td>Welton</td>
+</tr>
+<tr class="even">
+<td>Capítulo 6</td>
+<td>Guilherme</td>
+</tr>
+<tr class="odd">
+<td>Capítulo 7</td>
+<td>Indefinido</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="bookdown">BookDown</h1>
+
+<p>Para a escrever a apostila R utilizaremos o recurso <a href="https://bookdown.org/">BookDown</a> que é um pacote R livre e de código aberto construído sobre o R Markdown para tornar fácil escrever livros e artigos. Que torna possível a distribuição da Apostila R em vários formatos (PDF, HTML e EPUB, etc), assim deixando o leitor escolher o seu formato preferido e a leitura compatível com qualquer meio eletrônico.</p>
+
+<h1 id="escrita-formal">Escrita formal</h1>
+
+<p>Utilizaremos a terceira pessoa em toda a apostila R.</p>
+
+<h1 id="estilo-de-escrita">Estilo de Escrita</h1>
+
+<p>Os números circulados de vermelhos nas imagens abaixo indicam diferenças
+entre os padrões de escrita de código R. Os dois fragmentos de código
+fazem a mesma coisa, funcionam igualmente, porém o primeiro é o padrão
+adotado na Apostila R.</p>
+
+<p><img src="img/style-01.png" alt="" /></p>
+
+<ol>
+<li>Use o operador <code>&lt;-</code> e não o operador <code>=</code> para atribuir conteúdo aos
+objetos. Deixe espaço ao redor do operador <code>&lt;-</code>. Isso resolve a
+ambiguidade: <code>x&lt;-2</code> é <code>x &lt; -2</code> ou <code>x &lt;- 2</code>?</li>
+<li>Use espaço ao redor dos operadores matemáticos: exceto <code>^</code> e <code>/</code>,
+todos os demais tem espaços ao redor: <code>+ - * %% %/% %*%</code>. Um caso
+particular é o <code>-</code> que não tem espaço quando é o negativo (<code>-5 * 2</code>)
+mas tem quando é o menos (<code>2 - 5</code>).</li>
+<li>Use espaço ao redor dos operadores lógicos:
+<code>== != &gt; &gt;= &lt; &lt;= &amp; &amp;&amp; | || %in%</code>.</li>
+</ol>
+
+<p><img src="img/style-02.png" alt="" /></p>
+
+<ol>
+<li>Use espaço para separar o argumento do valor que ele recebe.</li>
+<li>Sempre use espaço após a vírgula e nunca use antes dela.</li>
+<li>A regra para a vírgula vale dentro de colchetes também. Duas vírgulas
+não ficam coladas.</li>
+<li>Use aspas duplas. Usuários experientes afirmam que a dupla é mais
+visível por ser um caractere mais cheio. Na linguagem R não existe
+nenhuma diferença de função entre elas, para outras, como o Shell,
+existe e deixa de ser uma questão estética mas funcional.</li>
+<li>Em algumas linguagens de programação há quem goste do estilo <em>comma
+first</em>. No entanto, além de não haver um argumento forte para, não é
+esse o padrão adotado pelos programadores de R. Não use <em>comma
+first</em>.</li>
+</ol>
+
+<p><img src="img/style-03.png" alt="" /></p>
+
+<ol>
+<li>Acostume-se a usar nomes curtos. A chance de erro de digitação com
+nomes curtos é menor. Tente abreviações e siglas para definir os seus
+objetos, evitando nomes que excedam 6 caracteres. O caso de nomes de
+função em pacote é uma exceção, pois nomes curtos demais podem não
+ser difícil de recordar ou de adivinhar o significado dele. Quando
+houver necessidade de nome composto, pode ser usado <code>.</code> e o
+<code>_</code>. Existe uma preferência para que nomes de funções em pacotes usem
+o <code>_</code> porque o <code>.</code> é usado na construção de funções método.</li>
+<li>Use endereços relativos porque isso deixa o código com
+mais portabilidade.</li>
+<li>Evite 1) espaço no nome de diretórios e arquivos, 2) evite caracteres
+acentuados (não ASCII) e 3) evite letras maiúsculas para diminuir os
+erros de digitação. No lugar dos espaços recomenda-se usar
+<em>underline</em> ou traço.</li>
+<li>Evite ultrapassar 72 caracteres no comprimento das linhas do
+código. Isso deixa seu código mais vertical e legível, não esconde
+texto para monitores de pequena resolução, evita quebras de linhas
+acidentais quando o texto é colado em processadores de texto (me
+pergunto para que alguém faz isso[^1]) ou se e-mail.</li>
+<li>Não abrevie o nome dos argumentos. Você pode até ganhar
+microssegundos de tempo com isso, mas o seu código fica menos
+portável (mais sujeito a erro e ambiguidade) além de ser menos
+compreendido por um usuário não familiar com a linguagem ou com a
+função que você está usando.</li>
+<li>Nunca abrevie para <code>T</code> ou <code>F</code> os valores lógicos <code>TRUE</code> e <code>FALSE</code>. Os
+últimos são palavras reservadas do sistema mas os primeiros são
+apenas objetos, ou seja, nada impede de fazer <code>T &lt;- 10</code> e isso seria
+desastroso para que abrevia <code>TRUE</code> com <code>T</code>.</li>
+<li>Evite definir objetos ou nomes das variáveis em <code>data.frames</code> com
+maiúsculas. O R é <em>case sensitive</em> e as chances de erro de digitação
+são maiores.</li>
+<li>Evite usar <code>;</code> e faça quebra de linha para deixar o código mais
+vertical. Ele é um operador que permite escrever duas instruções na
+mesma linha mas isso faz crescer horizontalmente, pode ultrapassar as
+margens.</li>
+</ol>
+
+<p><img src="img/style-04.png" alt="" /></p>
+
+<ol>
+<li>Nas construções como <code>function</code>, <code>if</code>, <code>for</code>, <code>while</code>, etc, deixe
+espaço entre o parentese direito e chave esquerda.</li>
+<li>O padrão de uso de chaves no R é o [K&amp;R] 1TBS (<em>the one true brace
+style</em>). Nesse padrão de chave, o construtor (<code>if</code>, <code>for</code>, <code>while</code>,
+etc) antecede a chave que abre e chave que fecha fica sozinha na
+linha (indentada com o construtor), a menos que esteja acompanhada de
+um cláusula <code>else</code>, de outra chave ou parêntese.</li>
+<li>Idem ao 1 e 2.</li>
+<li>Deixe espaço entre o nome do construtor e o parêntese que abre. A
+única exceção é para <code>function</code>.</li>
+<li>Idem ao 4.</li>
+<li>Evite deixar as construções como <code>function</code>, <code>if</code>, <code>for</code>, <code>while</code>,
+sem as chaves mesmo que o corpo seja uma linha curta. As chaves
+evitam que linhas adicionadas acidentalmente provoquem erros e
+deixa seu código mais claro.</li>
+<li>Use o <code>return</code> no final das suas funções porque isso marca melhor o
+que a função retorna. Usuários não familiares agradecem.</li>
+<li>A indentação padrão no R é com 4 espaços (e não com TAB). O RStudio,
+por exemplo, vem com 2 espaços por padrão. Mude isso no
+<code>Global Options &gt; Code &gt; Editing</code>. Os mais experientes dizem que 4
+espaços dá mais evidência da hierarquia do código.</li>
+</ol>
+
+<p><img src="img/style-05.png" alt="" /></p>
+
+<ol>
+<li>Definitivamente use <code>library</code> e não <code>require</code>. Apesar do último
+parecer mais lógico por ser um verbo, <code>library</code> é que carrega um
+pacote. Se o pacote não estiver presente, a <code>library</code> retorna um
+<strong>Error</strong> (!) e a <code>require</code> retorna um <code>FALSE</code>.</li>
+<li>O <code>~</code> é um operador como o <code>-</code>: tem espaço se existe um objeto que o
+precede, caso contrário não tem.</li>
+<li>Prefira notação científica nos gráficos. Uma grande vantagem do R é
+permitir anotação matemática nos gráficos. Use sempre que possível,
+principalmente quando os gráficos vão para uma
+monografia/disertação/tese ou artigo.</li>
+</ol>
+
+<p><img src="img/style-06.png" alt="" /></p>
+
+<ol>
+<li>Para seu próprio benefício, comente o seu código. Os comentários vão
+te guiar no futuro quando sua memória falhar. Encare o seus
+comentários como um texto normal e siga as regras do idioma que
+adotar usar: acentue, comece com maiúscula, termine com ponto.</li>
+<li>Quando for o caso, separe o seu código em &ldquo;seções temáticas&rdquo;. Use
+algo para destacar isso, como uma linha horizontal. No Emacs é
+bastante fácil fazer essas linhas horizontal como o mesmo
+comprimento[^2].</li>
+<li>Deixe linhas em branco para separar o código. Não empilhe código que
+não seja logicamente conectado pois os espaços funcionam como o
+intervalo entre dois parágrafos de texto.</li>
+<li>Use o mesmo número de caracteres para fazer comentários. Todos os
+editores de R usam um sinal de <code>#</code>, que é mais barato. Só o Emacs que
+usa dois sinais de comentários para o R, lisp e outras linguagens
+porque no Emacs o número de sinais tem função para indentação. Mas
+isso é customizável e recomenda-se que você mude para um.</li>
+</ol>
+
+	</p>
+
+	<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "GuiHathy" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+        <li><a href="//facebook.com/guilherme.hathy" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+        
+		
+		<li><a href="//twitter.com/guihathy" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		
+		
+		<li><a href="//github.com/guilhermehathy" target="_blank" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		
+		
+		
+		<li><a href="guilherme-hathy-98b51a128" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+		
+		
+		
+		
+		<li><a href="https://guilhermehathy.github.io/#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+		
+		<li><a href="https://guilhermehathy.github.io/index.xml" class="icon fa-rss" type="application/rss+xml"><span class="label">RSS</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; Guilherme Hathy</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li>Demo Images: <a href="//unsplash.com/">Unsplash</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script src="https://guilhermehathy.github.io/js/jquery.min.js"></script>
+<script src="https://guilhermehathy.github.io/js/jquery.poptrox.min.js"></script>
+<script src="https://guilhermehathy.github.io/js/skel.min.js"></script>
+<script src="https://guilhermehathy.github.io/js/util.js"></script>
+
+<script src="https://guilhermehathy.github.io/js/main.js"></script>
+
+
+
+
+
+	</body>
+</html>
