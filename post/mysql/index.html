@@ -1,0 +1,424 @@
+<!DOCTYPE HTML>
+
+<!-- 
+Strata by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>MySql Básico &middot; Guilherme Hathy</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Guilherme Hathy">
+		<meta name="description" content="Site Pessoal">
+		<meta http-equiv="content-language" content="en-us" />
+
+		
+		<meta name="og:site_name" content="Guilherme Hathy">
+		<meta name="og:title" content="MySql Básico">
+		<meta name="og:url" content="https://guilhermehathy.github.io/post/mysql/">
+		
+		<meta name="og:image" content="https://guilhermehathy.github.io/images/avatar.jpg">
+		
+		
+
+		<meta name="generator" content="Hugo 0.26" />
+
+		<!--[if lte IE 8]><script src='https://guilhermehathy.github.io/js/ie/html5shiv.js'></script><![endif]-->
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://guilhermehathy.github.io/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="https://guilhermehathy.github.io//css/ie8.css"><![endif]-->
+
+		
+		
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	
+	<a href="https://guilhermehathy.github.io/" class="image avatar"><img src="https://guilhermehathy.github.io/images/avatar.jpg" alt="" /></a>
+	
+	
+		<h1><strong>Data Scientist</strong>, apaixonado por <br> Estatística e Programação.</h1>
+	
+
+	
+		<nav id="sidebar">
+			<ul>
+			
+				<li><a href="https://guilhermehathy.github.io/">Home</a></li>
+			
+				<li><a href="https://guilhermehathy.github.io/post/">Blog</a></li>
+			
+			</ul>
+		</nav>
+	
+</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			
+	<span>
+		<h1>MySql Básico</h1>
+
+		<i class="fa fa-calendar"></i>&nbsp;&nbsp;
+<time datetime="2017-08-08 13:09:31 &#43;0200 &#43;0200">2017-08-08</time>&nbsp;&nbsp;
+
+
+
+
+    
+    
+        <i class="fa fa-folder"></i>&nbsp;&nbsp;
+        
+        <a class="article-category-link" href="https://guilhermehathy.github.io/categories/mysql">MySql</a>
+        
+        
+    
+
+
+
+   
+   
+
+
+	</span>
+
+	<p>
+	    <div id="banco-de-dados" class="section level1">
+  <h1><span class="header-section-number">1</span> Banco de Dados</h1>
+  <ul>
+  <li><p>Arquivos</p></li>
+  <li><p>Tabelas</p></li>
+  <li><p>Registros</p></li>
+  <li><p>Arquivos Sequenciais X Arquivos Acesso Direto X Banco de dados</p></li>
+  </ul>
+  </div>
+  <div id="sql-structured-query-language" class="section level1">
+  <h1><span class="header-section-number">2</span> SQL (Structured Query Language)</h1>
+  <ul>
+  <li><p>Pagos: Oracle, IBM, dBASE, Microsoft SQL Server</p></li>
+  <li><p>Grátis: MySql, MariaDB,…</p></li>
+  </ul>
+  </div>
+  <div id="mysql" class="section level1">
+  <h1><span class="header-section-number">3</span> MySql</h1>
+  <ul>
+  <li><p>Criado em 1994 na Suécia</p></li>
+  <li><p>Michael Widenius e David Axmark</p></li>
+  <li><p>É livre</p></li>
+  <li><p>Atualmente pertence à Oracle</p></li>
+  <li><p>Nasa, Google, Adobe, Ebay, Bradesco, Telecomunicação,…</p></li>
+  </ul>
+  </div>
+  <div id="criando-o-primeiro-banco-de-dados" class="section level1">
+  <h1><span class="header-section-number">4</span> Criando o Primeiro Banco de Dados</h1>
+  <p>Banco de dados -&gt; Tabelas -&gt; Registros -&gt; Campos</p>
+  <p>Criando o Banco de Dados:</p>
+  <pre><code>CREATE DATABASE cadastro;</code></pre>
+  <p>Tipos primitivos de dados:</p>
+  <ol style="list-style-type: decimal">
+  <li><p>Numérico:</p>
+  <ul>
+  <li><p>Inteiro: TinyInt, SmallInt, Int, MediumInt, BigInt</p></li>
+  <li><p>Real: Decimal, Float, Double, Real</p></li>
+  <li><p>Lógico: Bit, Bolean</p></li>
+  </ul></li>
+  <li><p>Data/Tempo: Date, DateTime, TimeStamp, Time, Year</p></li>
+  <li><p>Literal:</p>
+  <ul>
+  <li><p>Caractere: Char (Tamanho Fixo), VarChar (Se adapta a palavra)</p></li>
+  <li><p>Textos(textos longos): TinyText, Text, MediumText, LongText</p></li>
+  <li><p>Binário: TinyBlob, Bob, MediumBlob, LongBlob</p></li>
+  <li><p>Coleção: Enum, Set</p></li>
+  </ul></li>
+  <li><p>Espacial: Geometry, Point, Polygon, MultiPolygon</p></li>
+  </ol>
+  <p>Criando a Tabela:</p>
+  <pre><code>CREATE TABLE pessoas (
+  nome varchar(30),
+  idade tinyint(3),
+  sexo char(1),
+  peso float,
+  altura float,
+  nacionalidade varchar(20)
+  );</code></pre>
+  <p>Visualizando a tabela:</p>
+  <pre><code>DESCRIBE pessoas;</code></pre>
+  </div>
+  <div id="melhorando-o-nosso-banco-de-dados" class="section level1">
+  <h1><span class="header-section-number">5</span> Melhorando o nosso banco de dados</h1>
+  <p>Deletando o banco de dados anterior:</p>
+  <pre><code>DROP DATABASE cadastro;</code></pre>
+  <p>Criando o BD melhorado:</p>
+  <pre><code>CREATE DATABASE cadastro
+  DEFAULT CHARACTER SET utf8
+  DEFAULT COLLATE utf8_general_ci;</code></pre>
+  <p>Criando a Tabela Melhorada:</p>
+  <pre><code>CREATE TABLE pessoas (
+
+  id int NOT NULL AUTO_INCREMENT,
+  nome varchar(30) NOT NULL,
+  nascimento date,
+  sexo ENUM(&quot;M&quot;, &quot;F&quot;),
+  peso decimal(5,2),
+  altura decimal(3,2),
+  nacionalidade varchar(20) DEFAULT &quot;Brasil&quot;,
+  PRIMARY KEY(id)
+
+  ) DEFAULT CHARSET = utf8;</code></pre>
+  </div>
+  <div id="inserindo-dados-na-tabela" class="section level1">
+  <h1><span class="header-section-number">6</span> Inserindo Dados na Tabela</h1>
+  <p>Inserindo os dados:</p>
+  <pre><code>INSERT INTO pessoas (nome, nascimento, sexo, peso, altura, nacionalidade) VALUES (&#39;Guilherme&#39;,&#39;1996-01-20&#39;,&#39;M&#39;,&#39;75.10&#39;,&#39;1.84&#39;,&#39;Brasil&#39;);</code></pre>
+  <p>Inserindo Vários dados ao mesmo tempo:</p>
+  <pre><code>INSERT INTO pessoas (nome, nascimento, sexo, peso, altura, nacionalidade) VALUES (&#39;Luiz&#39;,&#39;1986-01-20&#39;,&#39;M&#39;,&#39;72.10&#39;,&#39;1.84&#39;,&#39;Portugal&#39;),
+  (&#39;Jośe&#39;,&#39;1955-01-20&#39;,&#39;M&#39;,&#39;100.20&#39;,&#39;1.94&#39;,&#39;Irlanda&#39;);</code></pre>
+  <p>Verificando se foi inserido:</p>
+  <pre><code>SELECT * FROM pessoas;</code></pre>
+  </div>
+  <div id="alterando-a-estrutura-da-tabela" class="section level1">
+  <h1><span class="header-section-number">7</span> Alterando a Estrutura da Tabela</h1>
+  <p>Adicionando nova coluna:</p>
+  <pre><code>ALTER TABLE pessoas ADD COLUMN profissao varchar(10);</code></pre>
+  <p>Eliminar uma coluna:</p>
+  <pre><code>ALTER TABLE pessoas DROP COLUMN profissao;</code></pre>
+  <p>Adicionando coluna entre colunas:</p>
+  <pre><code>ALTER TABLE pessoas ADD COLUMN profissao varchar(10) AFTER nome;</code></pre>
+  <p>Alterando a estrutura da coluna:</p>
+  <pre><code>ALTER TABLE pessoas MODIFY COLUMN profissao varchar(20); </code></pre>
+  <p>Renomear uma coluna:</p>
+  <pre><code>ALTER TABLE pessoas CHANGE COLUMN profissao prof varchar(15);</code></pre>
+  <p>Renomear o nome da tabela:</p>
+  <pre><code>ALTER TABLE pessoas RENAME TO dados;</code></pre>
+  <p>Criando a tabela cursos:</p>
+  <pre><code>CREATE TABLE IF NOT EXISTS cursos(
+    nome varchar(30) NOT NULL UNIQUE,
+    descricao text,
+    carga int UNSIGNED,
+    totaulas int,
+    ano year DEFAULT &#39;2016&#39;
+  ) DEFAULT CHARSET = utf8;</code></pre>
+  <p>Adicionando o campo de chave primaria:</p>
+  <pre><code>ALTER TABLE cursos ADD COLUMN idcurso int FIRST;
+  ALTER TABLE cursos ADD PRIMARY KEY(idcurso);</code></pre>
+  <p>Excluindo a tabela:</p>
+  <pre><code>DROP TABLE tabela;</code></pre>
+  </div>
+  <div id="manipulando-linhas" class="section level1">
+  <h1><span class="header-section-number">8</span> Manipulando linhas</h1>
+  <p>Adicionando valores na tabela curso para serem modificadas:</p>
+  <pre><code>INSERT INTO cursos VALUES
+   (&#39;1&#39;,&#39;HTML4&#39;,&#39;Curso de HTML5&#39;, &#39;40&#39;,&#39;37&#39;,&#39;2014&#39;),
+      (&#39;2&#39;,&#39;Algoritmos&#39;,&#39;Lógica de Programação&#39;,&#39;20&#39;,&#39;15&#39;,&#39;2014&#39;),
+      (&#39;3&#39;,&#39;Photoshop&#39;,&#39;Dicas de Photoshop CC&#39;,&#39;10&#39;,&#39;8&#39;,&#39;2014&#39;),
+      (&#39;4&#39;,&#39;PGP&#39;,&#39;Curso de PHP para iniciantes&#39;,&#39;40&#39;,&#39;20&#39;,&#39;2010&#39;),
+      (&#39;5&#39;,&#39;Jarva&#39;,&#39;Introdução à Linguagem Java&#39;,&#39;10&#39;,&#39;29&#39;,&#39;2000&#39;),
+      (&#39;6&#39;,&#39;MySQL&#39;,&#39;Banco de Dados MySQL&#39;,&#39;30&#39;,&#39;15&#39;,&#39;2016&#39;),
+      (&#39;7&#39;,&#39;Word&#39;,&#39;Curso completo de Word&#39;,&#39;40&#39;,&#39;30&#39;,&#39;2016&#39;),
+      (&#39;8&#39;,&#39;Sapateado&#39;,&#39;Danças Rítmicas&#39;,&#39;40&#39;,&#39;30&#39;,&#39;2018&#39;),
+      (&#39;9&#39;,&#39;Cozinha Árabe&#39;,&#39;Aprenda a fazer Kibe&#39;,&#39;40&#39;,&#39;30&#39;,&#39;2018&#39;),
+      (&#39;10&#39;,&#39;Youtuber&#39;,&#39;Gerar polêmica e ganhar inscritos&#39;,&#39;5&#39;,&#39;2&#39;,&#39;2018&#39;);</code></pre>
+  <p>Modificando as linhas erradas:</p>
+  <pre><code>UPDATE cursos SET nome = &#39;HTML5&#39; WHERE idcurso = &#39;1&#39;;
+  UPDATE cursos SET nome = &#39;PHP&#39;, ano = &#39;2015&#39; WHERE idcurso = &#39;4&#39;;
+  UPDATE cursos SET nome = &#39;Java&#39;, carga = &#39;40&#39;, ano = &#39;2015&#39; WHERE idcurso = &#39;5&#39; LIMIT 1;
+  UPDATE cursos SET ano = &#39;2015&#39; WHERE ano = &#39;2018&#39;;</code></pre>
+  <p>Deletando linhas:</p>
+  <pre><code>DELETE FROM cursos WHERE idcurso = &#39;8&#39;;
+  DELETE FROM cursos WHERE idcurso = &#39;9&#39;;
+  DELETE FROM cursos WHERE idcurso = &#39;10&#39;;</code></pre>
+  <p>Deletando Todas as linhas de uma tabela:</p>
+  <pre><code>TRUNCATE TABLE cursos;</code></pre>
+  </div>
+  <div id="obtendo-dados-das-tabelas" class="section level1">
+  <h1><span class="header-section-number">9</span> Obtendo Dados das Tabelas</h1>
+  <p>Selecionando todos os dados:</p>
+  <pre><code>SELECT * FROM cursos;</code></pre>
+  <p>Ordenação Crescente:</p>
+  <pre><code>SELECT * FROM cursos ORDER BY nome;</code></pre>
+  <p>Ordenação Decrescente:</p>
+  <pre><code>SELECT * FROM cursos ORDER BY nome DESC;</code></pre>
+  <p>Selecionando Colunas:</p>
+  <pre><code>SELECT nome, carga, ano FROM cursos ORDER BY nome;</code></pre>
+  <p>Selecionando Linhas:</p>
+  <pre><code>SELECT * FROM cursos WHERE ano = &#39;2016&#39; ORDER BY nome DESC;</code></pre>
+  <p>Selecionando Linhas e Colunas:</p>
+  <pre><code>SELECT nome, descricao FROM cursos WHERE ano = &#39;2016&#39; ORDER BY nome DESC;
+  SELECT nome, descricao FROM cursos WHERE ano != &#39;2016&#39; ORDER BY nome DESC;
+  SELECT nome, descricao FROM cursos WHERE ano &gt; &#39;2016&#39; ORDER BY nome DESC;
+  SELECT nome, descricao FROM cursos WHERE ano between 2014 and 2016;
+  SELECT nome, descricao FROM cursos WHERE ano IN (&#39;2014&#39;, &#39;2016&#39;);</code></pre>
+  <p>Selecionando todos os cursos que começam com a letra P:</p>
+  <pre><code>SELECT * FROM cursos WHERE nome LIKE &#39;P%&#39;;</code></pre>
+  <p>Selecionando todos os cursos que terminam com a letra A:</p>
+  <pre><code>SELECT * FROM cursos WHERE nome LIKE &#39;%A&#39;;</code></pre>
+  <p>Selecionando os cursos que não possuem a letra A:</p>
+  <pre><code>SELECT * FROM cursos WHERE nome NOT LIKE &#39;%A%&#39;;</code></pre>
+  <p>Lista com as cargas horarias:</p>
+  <pre><code>SELECT DISTINCT carga FROM cursos;</code></pre>
+  <p>Contando itens:</p>
+  <pre><code>SELECT  COUNT(*) FROM cursos where carga &gt; 40;</code></pre>
+  <p>Maximo, minimo, soma e media de uma campo:</p>
+  <pre><code>SELECT  MAX(carga) FROM cursos;
+  SELECT  MIN(carga) FROM cursos;
+  SELECT  SUM(carga) FROM cursos WHERE ano = &#39;2016&#39;;
+  SELECT  AVG(carga) FROM cursos;</code></pre>
+  <p>Agrupando registros:</p>
+  <pre><code>SELECT carga FROM cursos GROUP BY carga;
+  SELECT carga, COUNT(nome) FROM cursos GROUP BY carga;</code></pre>
+  <p>Agrupando e agregando:</p>
+  <pre><code>SELECT ano, COUNT(nome) FROM cursos GROUP BY ano HAVING COUNT(ano) &gt;= 5;
+  SELECT carga, COUNT(nome) FROM cursos WHERE ano &gt; 2015 GROUP BY carga HAVING carga &gt; (SELECT AVG(carga) FROM cursos);</code></pre>
+  </div>
+  <div id="modelo-relacional" class="section level1">
+  <h1><span class="header-section-number">10</span> Modelo Relacional</h1>
+  <p>Chaves Estrangeiras:</p>
+  <p>Usada para relacionar tabelas</p>
+  <pre><code>#Adicionando o curso preferido na tabela alunos
+  ##Criando a coluna cursopreferido
+
+  ALTER TABLE alunos ADD COLUMN cursopreferido int;
+
+
+  #Informando que a coluna cursopreferido é uma chave estrangeira
+
+  ALTER TABLE alunos ADD FOREIGN KEY (cursopreferido) REFERENCES cursos(idcurso);
+
+  #Adicionando o curso preferido de cada aluno
+
+  UPDATE alunos SET cursopreferido = &#39;6&#39; WHERE id = &#39;1&#39;;
+
+  #Mostrando os cursos preferidos
+
+  SELECT alunos.nome, cursos.nome, cursos.ano  FROM alunos JOIN cursos on cursos.idcurso = alunos.cursopreferido;
+  </code></pre>
+  </div>
+  <div id="usando-o-pacote-rmysql" class="section level1">
+  <h1><span class="header-section-number">11</span> Usando o pacote RMySQL</h1>
+  <pre class="r"><code>library(RMySQL)
+
+  #Conectando com o Bd
+
+  con &lt;- dbConnect(MySQL(),
+                   user=&quot;root&quot;, password=&quot;root&quot;,
+                   dbname=&quot;cadastro&quot;, host=&quot;127.0.0.1&quot;)
+
+  #Lista com todas as tabelas do nosso Bd
+
+  dbListTables(con)</code></pre>
+  <pre><code>## [1] &quot;alunos&quot; &quot;cursos&quot; &quot;dados&quot;</code></pre>
+  <pre class="r"><code>#Criando uma tabela nova
+
+  dbWriteTable(con, &quot;novatabela&quot;, mtcars)</code></pre>
+  <pre><code>## [1] TRUE</code></pre>
+  <pre class="r"><code>#Lendo a tabela do Bd
+
+  head( dbReadTable(con, &quot;novatabela&quot;))</code></pre>
+  <pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+  ## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+  ## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+  ## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+  ## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+  ## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+  ## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre>
+  <pre class="r"><code>#Fazendo uma Query usando SQL
+
+  dbGetQuery(con, &quot;SELECT * FROM novatabela limit 5&quot;)</code></pre>
+  <pre><code>##           row_names  mpg cyl disp  hp drat    wt  qsec vs am gear carb
+  ## 1         Mazda RX4 21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+  ## 2     Mazda RX4 Wag 21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+  ## 3        Datsun 710 22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+  ## 4    Hornet 4 Drive 21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+  ## 5 Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2</code></pre>
+  <pre class="r"><code>dbGetQuery(con, &quot;ALTER TABLE novatabela RENAME TO carros&quot;)</code></pre>
+  <pre><code>## NULL</code></pre>
+  <pre class="r"><code>dbListTables(con)</code></pre>
+  <pre><code>## [1] &quot;alunos&quot; &quot;carros&quot; &quot;cursos&quot; &quot;dados&quot;</code></pre>
+  <pre class="r"><code>#Excluindo a tabela:
+
+  dbRemoveTable(con, &quot;carros&quot;)</code></pre>
+  <pre><code>## [1] TRUE</code></pre>
+  </div>
+
+	</p>
+
+	<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "GuiHathy" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+        <li><a href="//facebook.com/guilherme.hathy" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+        
+		
+		<li><a href="//twitter.com/guihathy" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		
+		
+		<li><a href="//github.com/guilhermehathy" target="_blank" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		
+		
+		
+		<li><a href="guilherme-hathy-98b51a128" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+		
+		
+		
+		
+		<li><a href="https://guilhermehathy.github.io/#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+		
+		<li><a href="https://guilhermehathy.github.io/index.xml" class="icon fa-rss" type="application/rss+xml"><span class="label">RSS</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; Guilherme Hathy</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li>Demo Images: <a href="//unsplash.com/">Unsplash</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script src="https://guilhermehathy.github.io/js/jquery.min.js"></script>
+<script src="https://guilhermehathy.github.io/js/jquery.poptrox.min.js"></script>
+<script src="https://guilhermehathy.github.io/js/skel.min.js"></script>
+<script src="https://guilhermehathy.github.io/js/util.js"></script>
+
+<script src="https://guilhermehathy.github.io/js/main.js"></script>
+
+
+
+
+
+	</body>
+</html>

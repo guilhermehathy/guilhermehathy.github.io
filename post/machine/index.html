@@ -1,0 +1,338 @@
+<!DOCTYPE HTML>
+
+<!-- 
+Strata by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Machine Learning no Mercado Financeiro &middot; Guilherme Hathy</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Guilherme Hathy">
+		<meta name="description" content="Site Pessoal">
+		<meta http-equiv="content-language" content="en-us" />
+
+		
+		<meta name="og:site_name" content="Guilherme Hathy">
+		<meta name="og:title" content="Machine Learning no Mercado Financeiro">
+		<meta name="og:url" content="https://guilhermehathy.github.io/post/machine/">
+		
+		<meta name="og:image" content="https://guilhermehathy.github.io/images/avatar.jpg">
+		
+		
+
+		<meta name="generator" content="Hugo 0.26" />
+
+		<!--[if lte IE 8]><script src='https://guilhermehathy.github.io/js/ie/html5shiv.js'></script><![endif]-->
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://guilhermehathy.github.io/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="https://guilhermehathy.github.io//css/ie8.css"><![endif]-->
+
+		
+		
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	
+	<a href="https://guilhermehathy.github.io/" class="image avatar"><img src="https://guilhermehathy.github.io/images/avatar.jpg" alt="" /></a>
+	
+	
+		<h1><strong>Data Scientist</strong>, apaixonado por <br> Estatística e Programação.</h1>
+	
+
+	
+		<nav id="sidebar">
+			<ul>
+			
+				<li><a href="https://guilhermehathy.github.io/">Home</a></li>
+			
+				<li><a href="https://guilhermehathy.github.io/post/">Blog</a></li>
+			
+			</ul>
+		</nav>
+	
+</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			
+	<span>
+		<h1>Machine Learning no Mercado Financeiro</h1>
+
+		<i class="fa fa-calendar"></i>&nbsp;&nbsp;
+<time datetime="2017-08-08 13:09:31 &#43;0200 &#43;0200">2017-08-08</time>&nbsp;&nbsp;
+
+
+
+
+    
+    
+        <i class="fa fa-folder"></i>&nbsp;&nbsp;
+        
+        <a class="article-category-link" href="https://guilhermehathy.github.io/categories/machine-learning">Machine Learning</a>
+        
+        
+    
+
+
+
+   
+   
+
+
+	</span>
+
+	<p>
+	    
+
+<p><script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<br />
+<br /></p>
+
+<h1 id="introdução">Introdução</h1>
+
+<p><br />
+<br /></p>
+
+<h2 id="finanças-comportamentais">Finanças Comportamentais</h2>
+
+<p><br /></p>
+
+<p><span class="citation">Barber et al. (2014)</span> conclui que 90% das pessoas que entram  no mercado financeiro acabam perdendo o seu dinheiro no longo prazo. Para tentar explicar essa alto grau de fracasso, surgiu um ramo das finanças chamada Finanças Comportamentais. Boa parte desse estudo deriva dos fundamentos da Prospect Theory, escrita por <span class="citation">Kahneman and Tversky (1979)</span> (Nobel de economia em 2002)  e busca compreender o comportamento do investidor em contextos que envolve ganhos e perdas. Um exemplo é o artigo escrito por <span class="citation">Shefrin and Statman (1985)</span> que explica o efeito disposição, que está associado com a tendência que o investidor têm de realizar cedo demais os trades lucrativos e manter aqueles com perdas.</p>
+
+<p>Como demonstrado por <span class="citation">List (2004)</span> esse comportamento contraria a premissa básica que dá sustentação à maior parte  da teoria econômica e financeira moderna, que é fundamentada na racionalidade, dos agentes econômicos. De acordo com essa suposição, todos os agentes econômicos são 100% racionais, isso é, tomam decisões que maximizam a satisfação ou utilidade desses agentes.
+<br />
+<br /></p>
+
+<h3 id="prospect-theory">Prospect Theory</h3>
+
+<p><br />
+<br /></p>
+
+<p>A função valor, Figura 1, criada por <span class="citation">Kahneman and Tversky (1979)</span>, representa o valor que os indivíduos atribuem para determinados níveis de ganhos ou perdas. Assim mostrando que pessoas demonstram aversão ao risco quando estão ganhando e uma propensão ao risco quando estão perdendo. Isso implica que os investidores têm comportamentos diferentes, quando estão ou não lucrando em sua posição de ativos de riscos. Dessa forma este provavelmente irão &ldquo;realizar&rdquo; os lucros rapidamente, enquanto que tenderão a &ldquo;segurar&rdquo; por mais tempo a sua posição perdedora, na esperança que o mercado vire. Isso ocorre porque o psicológico das pessoas vai tentar indicar o caminho mais conveniente, seja valorizando os seus egos ao fazê-las realizar logo o lucro obtido, ou postergando a realização do prejuízo para minimizar o desconforto causado em seus egos e autoimagens pelo reconhecimento da perda.</p>
+
+<p>Figura 1 - Função Valor</p>
+
+<p><img src="/img/machine/theory.jpg" alt="Fonte: https://www.princeton.edu " /></p>
+
+<p>Então esse viés cognitivo pode gerar redução dos ganhos e um aumento de perdas para os investimentos em artigos de riscos. Basicamente o investidor se torna &ldquo;medroso&rdquo; quando está lucrando, assim fechando o trade antes que ele chegue no objetivo e &ldquo;corajoso&rdquo; quando está perdendo, assim deixando o trade aberto mesmo quando já é visível que ele deu errado.</p>
+
+<p><br />
+<br /></p>
+
+<h2 id="metatrader-5">MetaTrader 5</h2>
+
+<p><br />
+<br /></p>
+
+<p>A plataforma multimercado MetaTrader 5 permite executar transações no mercado Forex, de ações, futuros e contratos por diferença. Umas das funções mais importantes da MetaTrader 5 é o algotrading. Trata-se de uma negociação automatizada usando aplicativos especiais, especialmente, robôs de negociação. Eles agem sem a participação do trader, analisam de forma independente as cotações e executam transações de acordo com o algoritmo fixado neles.</p>
+
+<p>A MetaTrader 5 dispõe de todo um ambiente de autodesenvolvimento, teste e otimização de robôs. O algorítimo é desenvolvido usando a linguagem MQL5.</p>
+
+<p><br />
+<br /></p>
+
+<h2 id="machine-learning">Machine Learning</h2>
+
+<p><br />
+<br /></p>
+
+<p>Segundo @james2013introduction, Machine Learning ou Aprendizado de Máquina, se refere ao enorme conjunto de técnicas que visam criar sistemas computacionais cujo comportamento seja definido com base em dados já existentes. O comportamento do sistema não seria diretamente programado, mas sim adaptado de um conhecimento previamente adquirido, essa aprendizagem se assimila muito a forma em que humanos aprendem, com a experiência. Uma forma mais abstrata de definir a inteligencia é a capacidade de se adaptar com a experiência, logo o machine learning devera ser capaz de se adaptar conforme observa os efeitos de suas ações no meio em que está inserido.</p>
+
+<p><br />
+<br /></p>
+
+<h2 id="neurônio-artificial">Neurônio Artificial</h2>
+
+<p>Como demontrado por <span class="citation">Kriesel (2007)</span>, o neurônio artificial é uma estutura logica-matematica que busca imitar as funções neurologicas humanas. Contendo três elementos:</p>
+
+<ul>
+<li>Pesos  Sinápticos.</li>
+<li>Função de Soma.</li>
+<li>Função de ativação.</li>
+</ul>
+
+<p><img src="/img/machine/neuronio.jpg" alt="Fonte: https://http://www.gsigma.ufsc.br " />{#fig:neuronio}</p>
+
+<p>Como visto na figura 2, o neuronio recebe os valores de entrada com seus respectivos pesos, que são trasformados pela função soma e fornece uma saida que é dada pela função de transferencia.</p>
+
+<p>As entradas podem ser as entradas extrenas, saídas de outros neurônios, um bias ou qualquer combinação destes elementos. Onde o bias é é um erro sistemático diferentemente de erro aleatório.</p>
+
+<p>A função de ativação tem como objetivo somar todas as entradas por seus respectivos planos.
+Onde essa função é dada por, onde n é o valor de entrada no neuronio e p é o peso atribuido a ele:</p>
+
+<p><span class="math display">\[
+f(x) =  \sum(n * p)
+\]</span></p>
+
+<h2 id="redes-neurais-artificiais">Redes Neurais Artificiais</h2>
+
+<p>A partir da junção de varios neurônios artificiais, pode-se contruir uma rede neural artificial. Para <span class="citation">Kaastra and Boyd (1996)</span>, Redes Neurais Artificiais (RNAs) é o conjunto de técnicas que tentam imitar o funcionamento dos neurônios humanos, buscando soluções de problemas atrávez  de um processo de aprendizado. A técnica foi usada primeiramente nos campos da engenharia e da ciência cognitiva, mas nos últimos anos as RNAs vem sendo utilizadas em aplicações econômicas, devido ao seu potencial para reconhecer padrões, classificação e previsões em serie temporais.</p>
+
+<p>As redes Neurais são classificadas em três grupos, sendo eles:</p>
+
+<ul>
+<li><p>Camada de Entrada.</p></li>
+
+<li><p>Camada Oculta.</p></li>
+
+<li><p>Camada de Saida.</p></li>
+</ul>
+
+<p>Na camada de entrada é onde a rede recebe os dados para previsão ou treinamento, enquanto na camada oculta é onde a RNA irá extrair os padrões dos dados e na camada escondida o resultado final é concluido e apresentado.</p>
+
+<p><img src="/img/machine/rede.png" alt="Exemplo de uma Rede Neural Artificial" />{#fig:rede}</p>
+
+<p>Observando a figura 3, pode-se concluir que a RNA possui o padão 3 X 6 X 1, ou seja, possui 3 neurônios na camada de entrada, 6 neuronios da camada oculta e 1 na camada de saida.</p>
+
+<p></br>
+</br></p>
+
+<h1 id="objetivo">Objetivo</h1>
+
+<p><br />
+<br /></p>
+
+<p>Considerando que a alta porcentagem de fracasso dos investidores no mercado financeiro são devidos à fatores técnicos e psicológicos como demonstra <span class="citation">Barber et al. (2014)</span>, o objetivo deste projeto é duplo: otimizar as estratégias financeiras através de técnicas modernas de Machine Learning e eliminar o viés psicológico (fator humano) que influencie uma negociação.
+Com o crescente avanço das técnicas de Machine Learning vamos construir algoritmos capazes de aprender com as constantes mudanças da lógica do mercado financeiro, não sofrendo com sua volatilidade, pois anteciparão tais tendências.</p>
+
+<p>Além disso, como investir no mercado de capitais é contra intuitivo, pois o fator humano acaba por se sobressair a lógica do mercado (<span class="citation">Kahneman and Tversky (1979)</span>), eliminaremos o aspecto humano, automatizando as operações e aproveitando todas as oportunidades do mercado (em especial aqueles abertos 24h por dia), coisa que para um operador humano seria impossível.</p>
+
+<p><br />
+<br /></p>
+
+<h1 id="métodos">Métodos</h1>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<h2 id="mercado-forex-foreign-exchange-market">Mercado Forex (Foreign Exchange Market)</h2>
+
+<p><br /></p>
+
+<p>O Forex é um mercado financeiro descentralizado destinado a transações de câmbio, sendo o maior mercado do mundo, movimentando aproximadamente 5 trilhões de dólares diariamente, Ele opera 24 horas por dia, entre 22h00 GTM de Domingo e 22h:00 GTM de Sexta-feira.</p>
+
+<p>A operação no Forex envolve a compra de uma moeda e a simultânea venda de outra, ou seja,
+as moedas são negociadas em pares, por exemplo: dólar e iene (USD/JPY), real e
+dólar, etc. O investidor não compra dólares ou ienes, fisicamente, mas uma relação monetária de
+troca entre eles.</p>
+
+<p>Assim, quando alguém faz uma operação nesse mercado, não está comprando uma determinada
+divisa, mas um determinado PAR, uma taxa de câmbio entre duas moedas. Graças à flutuação
+nessas taxas, com a variação do valor relativo entre as moedas estrangeiras (ou entre a
+moeda nacional e as moedas estrangeiras), podem ser estruturadas diferentes estratégias de
+investimento, que podem resultar em lucros ou prejuízos.</p>
+
+<p><br /></p>
+
+<h1 id="referências">Referências</h1>
+
+<div id="refs" class="references">
+<div id="ref-barber2014day">
+<p>Barber, Brad M, Yi-Tsung Lee, Yu-Jane Liu, and Terrance Odean. 2014. “Do Day Traders Rationally Learn About Their Ability?” <em>Available at SSRN 2535636</em>.</p>
+</div>
+<div id="ref-james2013introduction">
+<p>James, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. 2013. <em>An Introduction to Statistical Learning</em>. Vol. 6. Springer.</p>
+</div>
+<div id="ref-kaastra1996designing">
+<p>Kaastra, Iebeling, and Milton Boyd. 1996. “Designing a Neural Network for Forecasting Financial and Economic Time Series.” <em>Neurocomputing</em> 10 (3). Elsevier: 215–36.</p>
+</div>
+<div id="ref-kahneman1979prospect">
+<p>Kahneman, Daniel, and Amos Tversky. 1979. “Prospect Theory: An Analysis of Decision Under Risk.” <em>Econometrica: Journal of the Econometric Society</em>. JSTOR, 263–91.</p>
+</div>
+<div id="ref-kriesel2007brief">
+<p>Kriesel, David. 2007. “A Brief Introduction on Neural Networks.” Citeseer.</p>
+</div>
+<div id="ref-list2004neoclassical">
+<p>List, John A. 2004. “Neoclassical Theory Versus Prospect Theory: Evidence from the Marketplace.” <em>Econometrica</em> 72 (2). Wiley Online Library: 615–25.</p>
+</div>
+<div id="ref-shefrin1985disposition">
+<p>Shefrin, Hersh, and Meir Statman. 1985. “The Disposition to Sell Winners Too Early and Ride Losers Too Long: Theory and Evidence.” <em>The Journal of Finance</em> 40 (3). Wiley Online Library: 777–90.</p>
+</div>
+</div>
+
+	</p>
+
+	<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "GuiHathy" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+        <li><a href="//facebook.com/guilherme.hathy" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+        
+		
+		<li><a href="//twitter.com/guihathy" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		
+		
+		<li><a href="//github.com/guilhermehathy" target="_blank" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		
+		
+		
+		<li><a href="guilherme-hathy-98b51a128" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+		
+		
+		
+		
+		<li><a href="https://guilhermehathy.github.io/#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+		
+		<li><a href="https://guilhermehathy.github.io/index.xml" class="icon fa-rss" type="application/rss+xml"><span class="label">RSS</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; Guilherme Hathy</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li>Demo Images: <a href="//unsplash.com/">Unsplash</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script src="https://guilhermehathy.github.io/js/jquery.min.js"></script>
+<script src="https://guilhermehathy.github.io/js/jquery.poptrox.min.js"></script>
+<script src="https://guilhermehathy.github.io/js/skel.min.js"></script>
+<script src="https://guilhermehathy.github.io/js/util.js"></script>
+
+<script src="https://guilhermehathy.github.io/js/main.js"></script>
+
+
+
+
+
+	</body>
+</html>

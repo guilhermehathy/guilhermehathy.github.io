@@ -17,7 +17,37 @@
       <pubDate>Thu, 10 Aug 2017 13:09:31 +0200</pubDate>
       
       <guid>https://guilhermehathy.github.io/post/numpy/</guid>
-      <description># MatplotLib e Numpy  ## Importando as bibliotecas import numpy as np import matplotlib.pyplot as plt %matplotlib inline  #Crando array com os salarios salarios = np.array([100,300,200,400]) salarios  array([100, 300, 200, 400])  plt.plot(salarios) plt.show()  plt.plot(salarios, c = &#39;Black&#39;, ls = &#39;--&#39;) plt.show()  plt.plot(salarios, c = &#39;Black&#39;, ls = &#39;--&#39;, marker = &#39;s&#39; ) plt.show()  # Adicionando Label salario_joao = np.array([100,300,200,400]) salario_rodrigo = np.array([300,250,100,600]) plt.plot(salario_joao, c = &#39;Black&#39;, ls = &#39;--&#39;, marker = &#39;s&#39; , label = &amp;quot;Salario João&amp;quot;) plt.</description>
+      <description>MatplotLib e Numpy ## Importando as bibliotecas import numpy as np import matplotlib.pyplot as plt %matplotlib inline  #Crando array com os salarios salarios = np.array([100,300,200,400]) salarios  array([100, 300, 200, 400])  plt.plot(salarios) plt.show()  plt.plot(salarios, c = &#39;Black&#39;, ls = &#39;--&#39;) plt.show()  plt.plot(salarios, c = &#39;Black&#39;, ls = &#39;--&#39;, marker = &#39;s&#39; ) plt.show()  # Adicionando Label salario_joao = np.array([100,300,200,400]) salario_rodrigo = np.array([300,250,100,600]) plt.plot(salario_joao, c = &#39;Black&#39;, ls = &#39;--&#39;, marker = &#39;s&#39; , label = &amp;quot;Salario João&amp;quot;) plt.</description>
+    </item>
+    
+    <item>
+      <title>Machine Learning no Mercado Financeiro</title>
+      <link>https://guilhermehathy.github.io/post/machine/</link>
+      <pubDate>Tue, 08 Aug 2017 13:09:31 +0200</pubDate>
+      
+      <guid>https://guilhermehathy.github.io/post/machine/</guid>
+      <description>Introdução 
+Finanças Comportamentais 
+Barber et al. (2014) conclui que 90% das pessoas que entram no mercado financeiro acabam perdendo o seu dinheiro no longo prazo. Para tentar explicar essa alto grau de fracasso, surgiu um ramo das finanças chamada Finanças Comportamentais. Boa parte desse estudo deriva dos fundamentos da Prospect Theory, escrita por Kahneman and Tversky (1979) (Nobel de economia em 2002) e busca compreender o comportamento do investidor em contextos que envolve ganhos e perdas.</description>
+    </item>
+    
+    <item>
+      <title>MySql Básico</title>
+      <link>https://guilhermehathy.github.io/post/mysql/</link>
+      <pubDate>Tue, 08 Aug 2017 13:09:31 +0200</pubDate>
+      
+      <guid>https://guilhermehathy.github.io/post/mysql/</guid>
+      <description>1 Banco de Dados  Arquivos
+ Tabelas
+ Registros
+ Arquivos Sequenciais X Arquivos Acesso Direto X Banco de dados
+   2 SQL (Structured Query Language)  Pagos: Oracle, IBM, dBASE, Microsoft SQL Server
+ Grátis: MySql, MariaDB,…
+   3 MySql  Criado em 1994 na Suécia
+ Michael Widenius e David Axmark
+ É livre
+ Atualmente pertence à Oracle
+ Nasa, Google, Adobe, Ebay, Bradesco, Telecomunicação,…</description>
     </item>
     
   </channel>

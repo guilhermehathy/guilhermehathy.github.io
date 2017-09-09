@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mysql on Guilherme Hathy</title>
+    <link>https://guilhermehathy.github.io/categories/mysql/</link>
+    <description>Recent content in Mysql on Guilherme Hathy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 08 Aug 2017 13:09:31 +0200</lastBuildDate>
+    
+	<atom:link href="https://guilhermehathy.github.io/categories/mysql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MySql Básico</title>
+      <link>https://guilhermehathy.github.io/post/mysql/</link>
+      <pubDate>Tue, 08 Aug 2017 13:09:31 +0200</pubDate>
+      
+      <guid>https://guilhermehathy.github.io/post/mysql/</guid>
+      <description>1 Banco de Dados  Arquivos
+ Tabelas
+ Registros
+ Arquivos Sequenciais X Arquivos Acesso Direto X Banco de dados
+   2 SQL (Structured Query Language)  Pagos: Oracle, IBM, dBASE, Microsoft SQL Server
+ Grátis: MySql, MariaDB,…
+   3 MySql  Criado em 1994 na Suécia
+ Michael Widenius e David Axmark
+ É livre
+ Atualmente pertence à Oracle
+ Nasa, Google, Adobe, Ebay, Bradesco, Telecomunicação,…</description>
+    </item>
+    
+  </channel>
+</rss>
