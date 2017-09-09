@@ -1,1 +1,0 @@
-# http://guilhermehathy.github.io
