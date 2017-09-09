@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Guilherme Hathy</title>
+    <link>https://guilhermehathy.github.io/categories/python/</link>
+    <description>Recent content in Python on Guilherme Hathy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 10 Aug 2017 13:09:31 +0200</lastBuildDate>
+    
+	<atom:link href="https://guilhermehathy.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Matplotlib e Numpy</title>
+      <link>https://guilhermehathy.github.io/post/numpy/</link>
+      <pubDate>Thu, 10 Aug 2017 13:09:31 +0200</pubDate>
+      
+      <guid>https://guilhermehathy.github.io/post/numpy/</guid>
+      <description># MatplotLib e Numpy  ## Importando as bibliotecas import numpy as np import matplotlib.pyplot as plt %matplotlib inline  #Crando array com os salarios salarios = np.array([100,300,200,400]) salarios  array([100, 300, 200, 400])  plt.plot(salarios) plt.show()  plt.plot(salarios, c = &#39;Black&#39;, ls = &#39;--&#39;) plt.show()  plt.plot(salarios, c = &#39;Black&#39;, ls = &#39;--&#39;, marker = &#39;s&#39; ) plt.show()  # Adicionando Label salario_joao = np.array([100,300,200,400]) salario_rodrigo = np.array([300,250,100,600]) plt.plot(salario_joao, c = &#39;Black&#39;, ls = &#39;--&#39;, marker = &#39;s&#39; , label = &amp;quot;Salario João&amp;quot;) plt.</description>
+    </item>
+    
+  </channel>
+</rss>
