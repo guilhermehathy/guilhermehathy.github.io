@@ -1,0 +1,473 @@
+<!DOCTYPE HTML>
+
+<!-- 
+Strata by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Pandas &middot; Guilherme Hathy</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Guilherme Hathy">
+		<meta name="description" content="Site Pessoal">
+		<meta http-equiv="content-language" content="en-us" />
+
+		
+		<meta name="og:site_name" content="Guilherme Hathy">
+		<meta name="og:title" content="Pandas">
+		<meta name="og:url" content="https://guilhermehathy.github.io/post/pandas/">
+		
+		<meta name="og:image" content="https://guilhermehathy.github.io/images/avatar.jpg">
+		
+		
+
+		<meta name="generator" content="Hugo 0.26" />
+
+		<!--[if lte IE 8]><script src='https://guilhermehathy.github.io/js/ie/html5shiv.js'></script><![endif]-->
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://guilhermehathy.github.io/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="https://guilhermehathy.github.io//css/ie8.css"><![endif]-->
+
+		
+		
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	
+	<a href="https://guilhermehathy.github.io/" class="image avatar"><img src="https://guilhermehathy.github.io/images/avatar.jpg" alt="" /></a>
+	
+	
+		<h1><strong>Data Scientist</strong>, apaixonado por <br> Estatística e Programação.</h1>
+	
+
+	
+		<nav id="sidebar">
+			<ul>
+			
+				<li><a href="https://guilhermehathy.github.io/">Home</a></li>
+			
+				<li><a href="https://guilhermehathy.github.io/post/">Blog</a></li>
+			
+			</ul>
+		</nav>
+	
+</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			
+	<span>
+		<h1>Pandas</h1>
+
+		<i class="fa fa-calendar"></i>&nbsp;&nbsp;
+<time datetime="2017-08-10 13:10:31 &#43;0200 &#43;0200">2017-08-10</time>&nbsp;&nbsp;
+
+
+
+
+    
+    
+        <i class="fa fa-folder"></i>&nbsp;&nbsp;
+        
+        <a class="article-category-link" href="https://guilhermehathy.github.io/categories/python">Python</a>
+        
+        
+    
+
+
+
+   
+   
+
+
+	</span>
+
+	<p>
+	    
+
+<h1 id="pandas">Pandas</h1>
+
+<p>Biblioteca usada para trabalhar com data frames no Python, foi inspirada no data frame da linguagem R.</p>
+
+<pre><code class="language-python">#Importando a biblioteca
+## Por convenção a biblioteca Pandas será chamada de pd.
+import pandas as pd
+</code></pre>
+
+<pre><code class="language-python"># Series dados de uma dimensão
+s = pd.Series([1,2,6,8,2])
+s
+</code></pre>
+
+<pre><code>0    1
+1    2
+2    6
+3    8
+4    2
+dtype: int64
+</code></pre>
+
+<pre><code class="language-python"># Describle é o equivalente ao summary no R
+
+s.describe()
+</code></pre>
+
+<pre><code>count    5.00000
+mean     3.80000
+std      3.03315
+min      1.00000
+25%      2.00000
+50%      2.00000
+75%      6.00000
+max      8.00000
+dtype: float64
+</code></pre>
+
+<pre><code class="language-python"># Verificando se a variavel é duplicada, no R tbm é duplicated()
+s.duplicated()
+</code></pre>
+
+<pre><code>0    False
+1    False
+2    False
+3    False
+4     True
+dtype: bool
+</code></pre>
+
+<h2 id="data-frames">Data Frames</h2>
+
+<pre><code class="language-python">df = pd.DataFrame([['João', 10],['Ricardo', 30],['Henrique', 17]],
+                 columns = ['Nome', 'Idade'])
+df
+</code></pre>
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Nome</th>
+      <th>Idade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>João</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Ricardo</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Henrique</td>
+      <td>17</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="language-python">df['Nome']
+</code></pre>
+
+<pre><code>0        João
+1     Ricardo
+2    Henrique
+Name: Nome, dtype: object
+</code></pre>
+
+<pre><code class="language-python">#Media
+df['Idade'].mean()
+</code></pre>
+
+<pre><code>19.0
+</code></pre>
+
+<pre><code class="language-python">#pegando a linha 1, equivalente ao df[1,] no R
+df.iloc[1]
+</code></pre>
+
+<pre><code>Nome     Ricardo
+Idade         30
+Name: 1, dtype: object
+</code></pre>
+
+<pre><code class="language-python">df.iloc[1]['Idade']
+</code></pre>
+
+<pre><code>30
+</code></pre>
+
+<h1 id="pydataset">PyDataset</h1>
+
+<p>Biblioteca com alguns conjuntos de dados</p>
+
+<pre><code class="language-python">import pydataset
+import pandas as pd
+</code></pre>
+
+<pre><code class="language-python"># Lista de todos os bancos de dados
+pydataset.data().head(10)
+</code></pre>
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dataset_id</th>
+      <th>title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AirPassengers</td>
+      <td>Monthly Airline Passenger Numbers 1949-1960</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>BJsales</td>
+      <td>Sales Data with Leading Indicator</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>BOD</td>
+      <td>Biochemical Oxygen Demand</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Formaldehyde</td>
+      <td>Determination of Formaldehyde</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>HairEyeColor</td>
+      <td>Hair and Eye Color of Statistics Students</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>InsectSprays</td>
+      <td>Effectiveness of Insect Sprays</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>JohnsonJohnson</td>
+      <td>Quarterly Earnings per Johnson &amp; Johnson Share</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>LakeHuron</td>
+      <td>Level of Lake Huron 1875-1972</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>LifeCycleSavings</td>
+      <td>Intercountry Life-Cycle Savings Data</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Nile</td>
+      <td>Flow of the River Nile</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="language-python">titanic = pydataset.data('titanic')
+titanic.head()
+</code></pre>
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>class</th>
+      <th>age</th>
+      <th>sex</th>
+      <th>survived</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>1st class</td>
+      <td>adults</td>
+      <td>man</td>
+      <td>yes</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1st class</td>
+      <td>adults</td>
+      <td>man</td>
+      <td>yes</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1st class</td>
+      <td>adults</td>
+      <td>man</td>
+      <td>yes</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1st class</td>
+      <td>adults</td>
+      <td>man</td>
+      <td>yes</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1st class</td>
+      <td>adults</td>
+      <td>man</td>
+      <td>yes</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="language-python">titanic.describe()
+</code></pre>
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>class</th>
+      <th>age</th>
+      <th>sex</th>
+      <th>survived</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>1316</td>
+      <td>1316</td>
+      <td>1316</td>
+      <td>1316</td>
+    </tr>
+    <tr>
+      <th>unique</th>
+      <td>3</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>top</th>
+      <td>3rd class</td>
+      <td>adults</td>
+      <td>man</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <th>freq</th>
+      <td>706</td>
+      <td>1207</td>
+      <td>869</td>
+      <td>817</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="language-python">titanic['class'].value_counts()
+</code></pre>
+
+<pre><code>3rd class    706
+1st class    325
+2nd class    285
+Name: class, dtype: int64
+</code></pre>
+
+	</p>
+
+	<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "GuiHathy" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+        <li><a href="//facebook.com/guilherme.hathy" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+        
+		
+		<li><a href="//twitter.com/guihathy" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		
+		
+		<li><a href="//github.com/guilhermehathy" target="_blank" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		
+		
+		
+		<li><a href="guilherme-hathy-98b51a128" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+		
+		
+		
+		
+		<li><a href="https://guilhermehathy.github.io/#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+		
+		<li><a href="https://guilhermehathy.github.io/index.xml" class="icon fa-rss" type="application/rss+xml"><span class="label">RSS</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; Guilherme Hathy</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li>Demo Images: <a href="//unsplash.com/">Unsplash</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script src="https://guilhermehathy.github.io/js/jquery.min.js"></script>
+<script src="https://guilhermehathy.github.io/js/jquery.poptrox.min.js"></script>
+<script src="https://guilhermehathy.github.io/js/skel.min.js"></script>
+<script src="https://guilhermehathy.github.io/js/util.js"></script>
+
+<script src="https://guilhermehathy.github.io/js/main.js"></script>
+
+
+
+
+
+	</body>
+</html>

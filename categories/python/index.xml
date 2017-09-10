@@ -6,10 +6,29 @@
     <description>Recent content in Python on Guilherme Hathy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Aug 2017 13:09:31 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 11 Aug 2017 13:10:31 +0200</lastBuildDate>
     
 	<atom:link href="https://guilhermehathy.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Visualização de Dados com Python</title>
+      <link>https://guilhermehathy.github.io/post/visualiza/</link>
+      <pubDate>Fri, 11 Aug 2017 13:10:31 +0200</pubDate>
+      
+      <guid>https://guilhermehathy.github.io/post/visualiza/</guid>
+      <description>Visualização de Dados com Python MatPlotLib %matplotlib inline import matplotlib.pyplot as plt import numpy as np import pandas as pd  # Equivalente ao seq() no R x = np.linspace(0,10,100)  #Garfico de x em relação ao seu seno ## r de Red e -- para ser pontilhado plt.plot(x, np.sin(x), &#39;r--&#39;) plt.show()  Seaborn: statistical data visualization %matplotlib inline import matplotlib.pyplot as plt import numpy as np  plt.plot(x, np.</description>
+    </item>
+    
+    <item>
+      <title>Pandas</title>
+      <link>https://guilhermehathy.github.io/post/pandas/</link>
+      <pubDate>Thu, 10 Aug 2017 13:10:31 +0200</pubDate>
+      
+      <guid>https://guilhermehathy.github.io/post/pandas/</guid>
+      <description>Pandas Biblioteca usada para trabalhar com data frames no Python, foi inspirada no data frame da linguagem R.
+#Importando a biblioteca ## Por convenção a biblioteca Pandas será chamada de pd. import pandas as pd  # Series dados de uma dimensão s = pd.Series([1,2,6,8,2]) s  0 1 1 2 2 6 3 8 4 2 dtype: int64  # Describle é o equivalente ao summary no R s.</description>
+    </item>
     
     <item>
       <title>Matplotlib e Numpy</title>
